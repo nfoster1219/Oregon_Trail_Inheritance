@@ -1,5 +1,3 @@
-
-
 class Traveler {
     constructor (name) {
         this.name = name
@@ -87,4 +85,45 @@ class Wagon {
         capacityElement.append(this.capacity) 
         passengerElement.append(this.passengers)
     }
+}
+
+class Doctor extends Traveler {
+    constructor (){
+        super ()
+    }
+
+    heal(traveler) {
+         traveler.isHealthy = true
+    }
+}
+    
+
+class Hunter extends Traveler {
+    constructor (){
+        super ()
+        this.food = 2
+    }
+
+    hunt () {
+        this.food += 5
+    }
+
+    eat () {
+        if (this.food >= 2) {
+            this.food -=2
+        }
+        else {
+            this.food = 0
+            this.isHealthy = false
+        }
+    }
+    giveFood (traveler, extraFood) {
+        if (this.food > extraFood) {
+            traveler.food += extraFood
+            this.food -= extraFood
+        }
+        else {
+            traveler.food += 0
+        }
+    }   
 }
