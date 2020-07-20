@@ -88,8 +88,8 @@ class Wagon {
 }
 
 class Doctor extends Traveler {
-    constructor (){
-        super ()
+    constructor (name){
+        super (name)
     }
 
     heal(traveler) {
@@ -99,8 +99,8 @@ class Doctor extends Traveler {
     
 
 class Hunter extends Traveler {
-    constructor (){
-        super ()
+    constructor (name){
+        super (name)
         this.food = 2
     }
 
